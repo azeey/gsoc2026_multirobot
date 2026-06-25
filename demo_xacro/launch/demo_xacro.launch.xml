@@ -1,0 +1,7 @@
+<launch>
+  <gz_server
+    world_sdf_file="$(find-pkg-share demo_xacro)/worlds/multi_robot.sdf"
+    use_composition="False"
+    create_own_container="False" />
+  <executable cmd="gz sim -g" output="screen" />
+</launch>

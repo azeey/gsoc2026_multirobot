@@ -1,0 +1,32 @@
+<launch>
+  <gz_server
+    world_sdf_file="$(find-pkg-share demo_original)/worlds/multi_robot_bug.sdf"
+    use_composition="False"
+    create_own_container="False" />
+  <node
+    pkg="ros_gz_sim"
+    exec="create"
+    args="-world multi_robot
+          -file $(find-pkg-share demo_original)/models/vehicle_group/model.sdf
+          -name vehicle_group_2
+          -x 3.0
+          -y 0.0
+          -z 0.0
+          -Y 0.0"
+    output="screen" />
+  <gz_spawn_model
+    world="multi_robot"
+    file="$(find-pkg-share demo_original)/models/vehicle_group/model.sdf"
+    model_string=""
+    topic=""
+    entity_name="vehicle_group_3"
+    entity_namespace=""
+    allow_renaming="false"
+    x="6.0"
+    y="0.0"
+    z="0.0"
+    roll="0.0"
+    pitch="0.0"
+    yaw="0.0"/>
+  <executable cmd="gz sim -g" output="screen" />
+</launch>

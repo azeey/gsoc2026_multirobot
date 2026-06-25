@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<root xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:include filename="../vehicle/model.sdf.xacro"/>
+  <xacro:macro name="vehicle_group" params="name pose">
+    <model name="${name}">
+      <pose>${pose}</pose>
+      <link name="dummy_link"/>
+      <xacro:vehicle_model
+        name="vehicle_1"
+        pose="0 -2 1 0 0 0"
+        imu_topic="/${name}/banana"
+        cmd_vel_topic="/${name}/banana/cmd_vel"
+        odom_topic="/${name}/banana/odometry"
+        tf_topic="/${name}/banana/tf"/>
+      <xacro:vehicle_model
+        name="vehicle_2"
+        pose="0 0 1 0 0 0"
+        imu_topic="/${name}/orange"
+        cmd_vel_topic="/${name}/orange/cmd_vel"
+        odom_topic="/${name}/orange/odometry"
+        tf_topic="/${name}/orange/tf"/>
+      <xacro:vehicle_model
+        name="vehicle_3"
+        pose="0 2 1 0 0 0"
+        imu_topic="/${name}/grape"
+        cmd_vel_topic="/${name}/grape/cmd_vel"
+        odom_topic="/${name}/grape/odometry"
+        tf_topic="/${name}/grape/tf"/>
+    </model>
+  </xacro:macro>
+</root>
