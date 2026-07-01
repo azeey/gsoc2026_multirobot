@@ -18,16 +18,12 @@
   <gz_spawn_model
     world="multi_robot"
     file="$(find-pkg-share demo_ns_support)/models/vehicle_group/model.sdf"
-    model_string=""
-    topic=""
     entity_name="vehicle_group_3"
     entity_namespace="__name__"
     allow_renaming="false"
     x="6.0"
     y="0.0"
     z="0.0"
-    roll="0.0"
-    pitch="0.0"
     yaw="0.0"/>
   <executable cmd="gz sim -g" output="screen" />
 </launch>
