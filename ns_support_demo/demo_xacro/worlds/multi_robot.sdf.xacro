@@ -50,7 +50,5 @@
     </model>
 
     <xacro:vehicle_group name="vehicle_group_1" pose="0 0 0 0 0 0"/>
-    <xacro:vehicle_group name="vehicle_group_2" pose="3 0 0 0 0 0"/>
-    <xacro:vehicle_group name="vehicle_group_3" pose="6 0 0 0 0 0"/>
   </world>
 </sdf>

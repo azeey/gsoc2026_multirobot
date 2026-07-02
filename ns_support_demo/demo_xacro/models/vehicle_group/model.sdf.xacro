@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<sdf version="1.12" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:include filename="model_xacro.sdf.xacro"/>
+  <xacro:arg name="name" default="vehicle_group"/>
+  <xacro:arg name="pose" default="0 0 0 0 0 0"/>
+  <xacro:vehicle_group
+      name="$(arg name)"
+      pose="$(arg pose)"/>
+
+</sdf>

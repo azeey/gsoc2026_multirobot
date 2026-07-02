@@ -18,6 +18,12 @@ Each vehicle has these main topics:
 - `cmd_vel`: velocity command input for the `DiffDrive` plugin.
 - `enable`: enable input for the `DiffDrive` plugin.
 
+The world creates three groups in different ways:
+
+- `vehicle_group_1` is defined directly in the world file.
+- `vehicle_group_2` is spawned by the `ros_gz_sim create` node.
+- `vehicle_group_3` is spawned by `gz_spawn_model`.
+
 ## Run
 
 Build the package, source the workspace, and run:
@@ -57,7 +63,5 @@ This keeps the main topic names short and separated by group.
 ## Limitations
 
 * Topics that cannot be set by the user still use the default Gazebo topic name. In this demo, the diff drive `enable` topic can still conflict when the same nested model names are used in several groups.
-
-* The reusable model is a xacro file, not a plain `vehicle_group.sdf`.That means it cannot be spawned directly with `ros_gz_sim create`, `gz_spawn_model`, or other command line tools that expect a ready SDF model. This makes it less flexible than direct namespace support.
 
 * Xacro reduces repeated SDF text, but users must know xacro syntax and must build or generate the SDF before use.
