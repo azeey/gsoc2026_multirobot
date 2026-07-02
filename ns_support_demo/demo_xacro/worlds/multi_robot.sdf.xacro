@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <sdf version="1.12" xmlns:xacro="http://www.ros.org/wiki/xacro">
-  <xacro:include filename="../models/vehicle_group/model.sdf.xacro"/>
+  <xacro:include filename="../models/vehicle_group/model_xacro.sdf.xacro"/>
 
   <world name="multi_robot">
     <plugin

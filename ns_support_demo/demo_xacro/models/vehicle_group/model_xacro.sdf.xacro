@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <root xmlns:xacro="http://www.ros.org/wiki/xacro">
-  <xacro:include filename="../vehicle/model.sdf.xacro"/>
+  <xacro:include filename="../vehicle/model_xacro.sdf.xacro"/>
   <xacro:macro name="vehicle_group" params="name pose">
     <model name="${name}">
       <pose>${pose}</pose>

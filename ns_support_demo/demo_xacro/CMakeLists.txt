@@ -16,8 +16,8 @@ add_custom_command(
           -o "${generated_world}"
   DEPENDS
     "${CMAKE_CURRENT_SOURCE_DIR}/worlds/multi_robot.sdf.xacro"
-    "${CMAKE_CURRENT_SOURCE_DIR}/models/vehicle/model.sdf.xacro"
-    "${CMAKE_CURRENT_SOURCE_DIR}/models/vehicle_group/model.sdf.xacro"
+    "${CMAKE_CURRENT_SOURCE_DIR}/models/vehicle/model_xacro.sdf.xacro"
+    "${CMAKE_CURRENT_SOURCE_DIR}/models/vehicle_group/model_xacro.sdf.xacro"
   VERBATIM
 )
 
