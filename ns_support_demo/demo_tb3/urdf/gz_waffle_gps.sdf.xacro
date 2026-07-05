@@ -2,7 +2,7 @@
 <sdf version="1.6" xmlns:xacro="http://www.ros.org/wiki/xacro">
     <xacro:arg name="namespace" default=""/>
 
-    <model name="turtlebot3_waffle"> 
+    <model name="turtlebot3_waffle_gps"> 
       <pose>0.0 0.0 0.0 0.0 0.0 0.0</pose>
 
       <link name="base_footprint"/>

@@ -34,7 +34,7 @@ from launch.substitutions import Command
 from launch.substitutions import LaunchConfiguration, PythonExpression
 
 from launch_ros.actions import Node
-
+from launch_ros.parameter_descriptions import ParameterValue
 
 def generate_launch_description():
     # Get the launch directory
@@ -75,7 +75,7 @@ def generate_launch_description():
 
     # Declare the launch arguments
     declare_namespace_cmd = DeclareLaunchArgument(
-        'namespace', default_value='tb3', description='Top-level namespace'
+        'namespace', default_value='tb3_gps', description='Top-level namespace'
     )
 
     declare_use_sim_time_cmd = DeclareLaunchArgument(
@@ -102,23 +102,23 @@ def generate_launch_description():
 
     declare_world_cmd = DeclareLaunchArgument(
         'world',
-        default_value=os.path.join(bringup_dir, 'worlds', 'tb3_sandbox.sdf.xacro'),
+        default_value=os.path.join(bringup_dir, 'worlds', 'tb3_empty_world.sdf.xacro'),
         description='Full path to world model file to load',
     )
 
     declare_robot_name_cmd = DeclareLaunchArgument(
-        'robot_name', default_value='tb3', description='name of the robot'
+        'robot_name', default_value='tb3_gps', description='name of the robot'
     )
 
     declare_robot_sdf_cmd = DeclareLaunchArgument(
         'robot_sdf',
-        default_value=os.path.join(bringup_dir, 'urdf', 'gz_waffle.urdf'),
+        default_value=os.path.join(bringup_dir, 'urdf', 'gz_waffle_gps.urdf'),
         description='Full path to robot sdf file to spawn the robot in gazebo',
     )
 
     declare_bridge_file_cmd = DeclareLaunchArgument(
         'bridge_file',
-        default_value=os.path.join(bringup_dir, 'configs', 'turtlebot3_waffle_bridge.yaml'),
+        default_value=os.path.join(bringup_dir, 'configs', 'turtlebot3_waffle_gps_bridge.yaml'),
         description='Full path to bridge yaml file to configure the ros_gz_bridge node')
 
     start_robot_state_publisher_cmd = Node(

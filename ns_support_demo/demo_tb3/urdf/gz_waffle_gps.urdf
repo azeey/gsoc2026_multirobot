@@ -1,0 +1,367 @@
+<?xml version="1.0"?>
+<robot name="turtlebot3_waffle_gps">
+  <material name="white">
+    <color rgba="1 1 1 1"/>
+  </material>
+  <material name="gray">
+    <color rgba="0.5 0.5 0.5 1"/>
+  </material>
+
+  <link name="base_footprint"/>
+
+  <joint name="base_joint" type="fixed">
+    <parent link="base_footprint"/>
+    <child link="base_link"/>
+    <origin xyz="0.0 0.0 0.010" rpy="0 0 0"/>
+  </joint>
+
+  <link name="base_link">
+    <inertial>
+      <origin xyz="-0.064 0 0.048" rpy="0 0 0"/>
+      <mass value="1.0"/>
+      <inertia ixx="0.001" ixy="0.000" ixz="0.000" iyy="0.001" iyz="0.000" izz="0.001"/>
+    </inertial>
+    <collision name="base_collision">
+      <origin xyz="-0.064 0 0.048" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.265 0.265 0.089"/>
+      </geometry>
+    </collision>
+    <visual name="base_visual">
+      <origin xyz="-0.064 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://demo_tb3/models/turtlebot3_model/meshes/waffle_base.dae" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="white"/>
+    </visual>
+  </link>
+
+  <joint name="imu_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="imu_link"/>
+    <origin xyz="0.0 0 0.068" rpy="0 0 0"/>
+  </joint>
+
+  <link name="imu_link"/>
+
+  <joint name="gps_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="gps_link"/>
+    <origin xyz="-0.05 0 0.05" rpy="0 0 0"/>
+  </joint>
+
+  <link name="gps_link"/>
+
+  <joint name="lidar_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="base_scan"/>
+    <origin xyz="-0.064 0 0.121" rpy="0 0 0"/>
+  </joint>
+
+  <link name="base_scan">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.125"/>
+      <inertia ixx="0.001" ixy="0.000" ixz="0.000" iyy="0.001" iyz="0.000" izz="0.001"/>
+    </inertial>
+    <collision name="lidar_sensor_collision">
+      <origin xyz="0.012 0 -0.010" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.0508" length="0.055"/>
+      </geometry>
+    </collision>
+    <visual name="lidar_sensor_visual">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://demo_tb3/models/turtlebot3_model/meshes/lds.dae" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="gray"/>
+    </visual>
+  </link>
+
+  <joint name="wheel_left_joint" type="continuous">
+    <parent link="base_link"/>
+    <child link="wheel_left_link"/>
+    <origin xyz="0.0 0.144 0.023" rpy="-1.57 0 0"/>
+    <axis xyz="0 0 1"/>
+  </joint>
+
+  <link name="wheel_left_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.1"/>
+      <inertia ixx="0.001" ixy="0.000" ixz="0.000" iyy="0.001" iyz="0.000" izz="0.001"/>
+    </inertial>
+    <collision name="wheel_left_collision">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.033" length="0.018"/>
+      </geometry>
+    </collision>
+    <visual name="wheel_left_visual">
+      <origin xyz="0 0 0" rpy="1.57 0 0"/>
+      <geometry>
+        <mesh filename="package://demo_tb3/models/turtlebot3_model/meshes/tire.dae" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="gray"/>
+    </visual>
+  </link>
+
+  <joint name="wheel_right_joint" type="continuous">
+    <parent link="base_link"/>
+    <child link="wheel_right_link"/>
+    <origin xyz="0.0 -0.144 0.023" rpy="-1.57 0 0"/>
+    <axis xyz="0 0 1"/>
+  </joint>
+
+  <link name="wheel_right_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.1"/>
+      <inertia ixx="0.001" ixy="0.000" ixz="0.000" iyy="0.001" iyz="0.000" izz="0.001"/>
+    </inertial>
+    <collision name="wheel_right_collision">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.033" length="0.018"/>
+      </geometry>
+    </collision>
+    <visual name="wheel_right_visual">
+      <origin xyz="0 0 0" rpy="1.57 0 0"/>
+      <geometry>
+        <mesh filename="package://demo_tb3/models/turtlebot3_model/meshes/tire.dae" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="gray"/>
+    </visual>
+  </link>
+
+  <joint name="caster_back_right_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="caster_back_right_link"/>
+    <origin xyz="-0.177 -0.064 -0.004" rpy="-1.57 0 0"/>
+  </joint>
+
+  <link name="caster_back_right_link">
+    <inertial>
+      <mass value="0.001"/>
+      <inertia ixx="0.00001" ixy="0.000" ixz="0.000" iyy="0.00001" iyz="0.000" izz="0.00001"/>
+    </inertial>
+    <collision name="caster_back_right_collision">
+      <geometry>
+        <sphere radius="0.0060000"/>
+      </geometry>
+    </collision>
+    <visual name="caster_back_right_visual">
+      <geometry>
+        <sphere radius="0.0060000"/>
+      </geometry>
+      <material name="gray"/>
+    </visual>
+  </link>
+
+  <joint name="caster_back_left_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="caster_back_left_link"/>
+    <origin xyz="-0.177 0.064 -0.004" rpy="-1.57 0 0"/>
+  </joint>
+
+  <link name="caster_back_left_link">
+    <inertial>
+      <mass value="0.001"/>
+      <inertia ixx="0.00001" ixy="0.000" ixz="0.000" iyy="0.00001" iyz="0.000" izz="0.00001"/>
+    </inertial>
+    <collision name="caster_back_left_collision">
+      <geometry>
+        <sphere radius="0.0060000"/>
+      </geometry>
+    </collision>
+    <visual name="caster_back_left_visual">
+      <geometry>
+        <sphere radius="0.0060000"/>
+      </geometry>
+      <material name="gray"/>
+    </visual>
+  </link>
+
+  <joint name="camera_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="camera_link"/>
+    <origin xyz="0.064 -0.065 0.094" rpy="0 0 0"/>
+  </joint>
+
+  <link name="camera_link">
+    <inertial>
+      <origin xyz="0.005 0.018 0.013" rpy="0 0 0"/>
+      <mass value="0.035"/>
+      <inertia ixx="0.001" ixy="0.000" ixz="0.000" iyy="0.001" iyz="0.000" izz="0.001"/>
+    </inertial>
+    <collision name="camera_collision">
+      <origin xyz="0 0.047 -0.005" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.008 0.130 0.022"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <gazebo reference="imu_link">
+    <sensor name="tb3_imu" type="imu">
+      <always_on>true</always_on>
+      <update_rate>200</update_rate>
+      <topic>imu/data</topic>
+      <frame_id>imu_link</frame_id>
+      <imu>
+        <angular_velocity>
+          <x><noise type="gaussian"><mean>0.0</mean><stddev>2e-4</stddev></noise></x>
+          <y><noise type="gaussian"><mean>0.0</mean><stddev>2e-4</stddev></noise></y>
+          <z><noise type="gaussian"><mean>0.0</mean><stddev>2e-4</stddev></noise></z>
+        </angular_velocity>
+        <linear_acceleration>
+          <x><noise type="gaussian"><mean>0.0</mean><stddev>1.7e-2</stddev></noise></x>
+          <y><noise type="gaussian"><mean>0.0</mean><stddev>1.7e-2</stddev></noise></y>
+          <z><noise type="gaussian"><mean>0.0</mean><stddev>1.7e-2</stddev></noise></z>
+        </linear_acceleration>
+      </imu>
+    </sensor>
+  </gazebo>
+
+  <gazebo reference="gps_link">
+    <sensor name="navsat" type="navsat">
+      <always_on>true</always_on>
+      <update_rate>1</update_rate>
+      <topic>gps/fix</topic>
+      <frame_id>gps_link</frame_id>
+      <navsat>
+        <position_sensing>
+          <horizontal><noise type="gaussian"><mean>0.0</mean><stddev>0.0</stddev></noise></horizontal>
+          <vertical><noise type="gaussian"><mean>0.0</mean><stddev>0.0</stddev></noise></vertical>
+        </position_sensing>
+      </navsat>
+    </sensor>
+  </gazebo>
+
+  <gazebo reference="base_scan">
+    <sensor name="hls_lfcd_lds" type="gpu_lidar">
+      <always_on>true</always_on>
+      <visualize>true</visualize>
+      <pose>0 0 0.029 0 0 0</pose>
+      <update_rate>5</update_rate>
+      <topic>scan</topic>
+      <frame_id>base_scan</frame_id>
+      <ray>
+        <scan>
+          <horizontal>
+            <samples>360</samples>
+            <resolution>1.000000</resolution>
+            <min_angle>0.000000</min_angle>
+            <max_angle>6.280000</max_angle>
+          </horizontal>
+        </scan>
+        <range>
+          <min>0.00001</min>
+          <max>20.0</max>
+          <resolution>0.015000</resolution>
+        </range>
+        <noise>
+          <type>gaussian</type>
+          <mean>0.0</mean>
+          <stddev>0.01</stddev>
+        </noise>
+      </ray>
+    </sensor>
+  </gazebo>
+
+  <gazebo reference="wheel_left_link">
+    <mu1>1</mu1>
+    <mu2>1</mu2>
+    <slip1>0.035</slip1>
+    <slip2>0</slip2>
+    <fdir1>0 0 1</fdir1>
+    <kp>1e+5</kp>
+    <kd>1</kd>
+    <maxVel>0.01</maxVel>
+    <minDepth>0.001</minDepth>
+  </gazebo>
+
+  <gazebo reference="wheel_right_link">
+    <mu1>1</mu1>
+    <mu2>1</mu2>
+    <slip1>0.035</slip1>
+    <slip2>0</slip2>
+    <fdir1>0 0 1</fdir1>
+    <kp>1e+5</kp>
+    <kd>1</kd>
+    <maxVel>0.01</maxVel>
+    <minDepth>0.001</minDepth>
+  </gazebo>
+
+  <gazebo reference="caster_back_right_link">
+    <kp>1e+5</kp>
+    <kd>1</kd>
+    <maxVel>0.01</maxVel>
+    <minDepth>0.001</minDepth>
+  </gazebo>
+
+  <gazebo reference="caster_back_left_link">
+    <kp>1e+5</kp>
+    <kd>1</kd>
+    <maxVel>0.01</maxVel>
+    <minDepth>0.001</minDepth>
+  </gazebo>
+
+  <gazebo reference="camera_link">
+    <sensor name="intel_realsense_r200_depth" type="depth">
+      <always_on>1</always_on>
+      <update_rate>5</update_rate>
+      <pose>0 0 0 0 0 0</pose>
+      <frame_id>camera_depth_frame</frame_id>
+      <camera name="realsense_depth_camera">
+        <horizontal_fov>1.047</horizontal_fov>
+        <image>
+          <width>320</width>
+          <height>240</height>
+        </image>
+        <lens>
+          <projection>
+            <tx>19.4</tx>
+          </projection>
+        </lens>
+        <depth_camera>
+          <clip>
+            <near>0.001</near>
+            <far>5.0</far>
+          </clip>
+        </depth_camera>
+      </camera>
+    </sensor>
+  </gazebo>
+
+  <gazebo>
+    <plugin filename="gz-sim-diff-drive-system" name="gz::sim::systems::DiffDrive">
+      <left_joint>wheel_left_joint</left_joint>
+      <right_joint>wheel_right_joint</right_joint>
+      <wheel_separation>0.287</wheel_separation>
+      <wheel_radius>0.033</wheel_radius>
+      <max_linear_acceleration>1</max_linear_acceleration>
+      <min_linear_acceleration>-1</min_linear_acceleration>
+      <max_angular_acceleration>2</max_angular_acceleration>
+      <min_angular_acceleration>-2</min_angular_acceleration>
+      <max_linear_velocity>0.46</max_linear_velocity>
+      <min_linear_velocity>-0.46</min_linear_velocity>
+      <max_angular_velocity>1.9</max_angular_velocity>
+      <min_angular_velocity>-1.9</min_angular_velocity>
+      <topic>cmd_vel</topic>
+      <odom_topic>odom</odom_topic>
+      <tf_topic>tf</tf_topic>
+      <frame_id>odom</frame_id>
+      <child_frame_id>base_footprint</child_frame_id>
+      <odom_publish_frequency>30</odom_publish_frequency>
+    </plugin>
+
+    <plugin filename="gz-sim-joint-state-publisher-system" name="gz::sim::systems::JointStatePublisher">
+      <joint_name>wheel_left_joint</joint_name>
+      <joint_name>wheel_right_joint</joint_name>
+      <topic>joint_states</topic>
+      <update_rate>30</update_rate>
+    </plugin>
+  </gazebo>
+</robot>

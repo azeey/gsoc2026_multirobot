@@ -42,6 +42,9 @@ def generate_launch_description():
             'P': LaunchConfiguration('pitch', default='0.00'),
             'Y': LaunchConfiguration('yaw', default='0.00')}
 
+    bridge_file = LaunchConfiguration('bridge_file',
+        default=os.path.join(bringup_dir, 'configs', 'turtlebot3_waffle_bridge.yaml'))
+
     # Declare the launch arguments
     declare_namespace_cmd = DeclareLaunchArgument(
         'namespace',
@@ -55,8 +58,13 @@ def generate_launch_description():
 
     declare_robot_sdf_cmd = DeclareLaunchArgument(
         'robot_sdf',
-        default_value=os.path.join(bringup_dir, 'urdf', 'gz_waffle.sdf.xacro'),
+        default_value=os.path.join(bringup_dir, 'urdf', 'gz_waffle.sdf'),
         description='Full path to robot sdf file to spawn the robot in gazebo')
+
+    declare_bridge_file_cmd = DeclareLaunchArgument(
+        'bridge_file',
+        default_value=os.path.join(bringup_dir, 'configs', 'turtlebot3_waffle_bridge.yaml'),
+        description='Full path to bridge yaml file to configure the ros_gz_bridge node')
 
     bridge = Node(
         package='ros_gz_bridge',
@@ -64,9 +72,7 @@ def generate_launch_description():
         namespace=namespace,
         parameters=[
             {
-                'config_file': os.path.join(
-                    bringup_dir, 'configs', 'turtlebot3_waffle_bridge.yaml'
-                ),
+                'config_file': bridge_file,
                 'expand_gz_topic_names': True,
                 'use_sim_time': True,
             }
@@ -78,12 +84,10 @@ def generate_launch_description():
         package='ros_gz_sim',
         executable='create',
         output='screen',
-        namespace=namespace,
         arguments=[
             '-name', robot_name,
-            '-string', Command([
-                FindExecutable(name='xacro'), ' ', 'namespace:=',
-                LaunchConfiguration('namespace'), ' ', robot_sdf]),
+            '-ns', namespace,
+            '-file', robot_sdf,
             '-x', pose['x'], '-y', pose['y'], '-z', pose['z'],
             '-R', pose['R'], '-P', pose['P'], '-Y', pose['Y']]
     )
@@ -99,6 +103,7 @@ def generate_launch_description():
     ld.add_action(declare_namespace_cmd)
     ld.add_action(declare_robot_name_cmd)
     ld.add_action(declare_robot_sdf_cmd)
+    ld.add_action(declare_bridge_file_cmd)
 
     ld.add_action(set_env_vars_resources)
     ld.add_action(set_env_vars_resources2)
