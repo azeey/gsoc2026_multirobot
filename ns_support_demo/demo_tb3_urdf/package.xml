@@ -1,5 +1,5 @@
 <package format="3">
-  <name>demo_tb3</name>
+  <name>demo_tb3_urdf</name>
   <version>0.0.0</version>
   <description>Copy from Nav2 Minimum TurtleBot3 Simulation</description>
   <maintainer email="1409947012@qq.com">C88-YQ</maintainer>

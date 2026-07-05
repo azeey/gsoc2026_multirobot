@@ -30,7 +30,7 @@ from launch_ros.actions import Node
 
 
 def generate_launch_description():
-    bringup_dir = get_package_share_directory('demo_tb3')
+    bringup_dir = get_package_share_directory('demo_tb3_urdf')
 
     namespace = LaunchConfiguration('namespace')
     robot_name = LaunchConfiguration('robot_name')

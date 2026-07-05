@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.8)
-project(demo_tb3)
+project(demo_tb3_urdf)
 
 # find dependencies
 find_package(ament_cmake REQUIRED)
