@@ -1,8 +1,8 @@
 <launch>
   <gz_server
     world_sdf_file="$(find-pkg-share demo_original)/worlds/multi_robot_bug.sdf"
-    use_composition="False"
-    create_own_container="False" />
+    use_composition="True"
+    create_own_container="True" />
   <node
     pkg="ros_gz_sim"
     exec="create"

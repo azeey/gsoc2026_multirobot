@@ -24,19 +24,27 @@ The world creates three groups in different ways:
 
 `__name__` means the group model name is used as the namespace.
 
-## Run
+## Run & Check
 
-Build the package, source the workspace, and run:
+* Build the package, source the workspace, and run:
 
-```bash
-ros2 launch demo_ns_support demo_ns_support.launch.xml
-```
+  ```bash
+  ros2 launch demo_ns_support demo_ns_support.launch.xml
+  ```
 
-Check Gazebo topics with:
+* This launch file also starts `ros_gz_bridge` with the bridge configuration in `config/bridge.yaml`.
+ 
+  Check Gazebo topics with:
 
-```bash
-gz topic --list
-```
+  ```bash
+  gz topic --list
+  ```
+
+  Check ros topics with:
+
+  ```bash
+  ros topic list
+  ```
 
 ## Scene
 

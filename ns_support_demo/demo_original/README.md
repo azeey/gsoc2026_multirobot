@@ -22,25 +22,39 @@ The world creates three groups in different ways:
 - `vehicle_group_2` is spawned by the `ros_gz_sim create` node.
 - `vehicle_group_3` is spawned by `gz_spawn_model`.
 
-## Run
+## Run & Check
 
-Build the package, source the workspace, and run:
+* Build the package, source the workspace, and run:
 
-```bash
-ros2 launch demo_original demo_original.launch.xml
-```
+  ```bash
+  ros2 launch demo_original demo_original.launch.xml
+  ```
 
-To show the default naming problem, run:
+  This launch file also starts `ros_gz_bridge` with the bridge configuration in `config/bridge.yaml`. The diff drive `enable` topics are not bridged because different robots will still publish conflicting Gazebo `enable` topic names.
 
-```bash
-ros2 launch demo_original demo_original_bug.launch.xml
-```
+  Check Gazebo topics with:
 
-Check Gazebo topics with:
+  ```bash
+  gz topic --list
+  ```
 
-```bash
-gz topic --list
-```
+  Check ros topics with:
+
+  ```bash
+  ros2 topic list
+  ```
+
+* To show the default naming problem, run:
+
+  ```bash
+  ros2 launch demo_original demo_original_bug.launch.xml
+  ```
+
+  Check Gazebo topics with:
+
+  ```bash
+  gz topic --list
+  ```
 
 ## Default Topic Naming Problem
 
