@@ -29,7 +29,7 @@ The world creates three groups in different ways:
 * Build the package, source the workspace, and run:
 
   ```bash
-  ros2 launch demo_xacro demo_xacro.launch.xml
+  ros2 launch demo_xacro demo_xacro.launch.py
   ```
 
 * This launch file also starts `ros_gz_bridge` with the bridge configuration in `config/bridge.yaml`. The diff drive `enable` topics are not bridged because different robots will still publish conflicting Gazebo `enable` topic names.

@@ -27,7 +27,7 @@ The world creates three groups in different ways:
 * Build the package, source the workspace, and run:
 
   ```bash
-  ros2 launch demo_original demo_original.launch.xml
+  ros2 launch demo_original demo_original.launch.py
   ```
 
   This launch file also starts `ros_gz_bridge` with the bridge configuration in `config/bridge.yaml`. The diff drive `enable` topics are not bridged because different robots will still publish conflicting Gazebo `enable` topic names.
@@ -87,7 +87,7 @@ The world creates three groups in different ways:
 
 ## Manual Topic Workaround
 
-* `demo_original.launch.xml` avoids most conflicts by using separate SDF files for each vehicle and by writing the topic names directly in those files. The main topics then use group names:
+* `demo_original.launch.py` avoids most conflicts by using separate SDF files for each vehicle and by writing the topic names directly in those files. The main topics then use group names:
 
   ```text
   /vehicle_group_1/banana/imu
