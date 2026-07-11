@@ -112,7 +112,7 @@ def generate_launch_description():
 
     declare_robot_sdf_cmd = DeclareLaunchArgument(
         'robot_sdf',
-        default_value=os.path.join(bringup_dir, 'urdf', 'gz_waffle.urdf'),
+        default_value=os.path.join(bringup_dir, 'urdf', 'gz_waffle.sdf'),
         description='Full path to robot sdf file to spawn the robot in gazebo',
     )
 
