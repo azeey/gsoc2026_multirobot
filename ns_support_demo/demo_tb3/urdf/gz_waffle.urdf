@@ -27,7 +27,7 @@
     <visual name="base_visual">
       <origin xyz="-0.064 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://demo_tb3_urdf/models/turtlebot3_model/meshes/waffle_base.dae" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://demo_tb3/models/turtlebot3_model/meshes/waffle_base.dae" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="white"/>
     </visual>
@@ -62,7 +62,7 @@
     <visual name="lidar_sensor_visual">
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://demo_tb3_urdf/models/turtlebot3_model/meshes/lds.dae" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://demo_tb3/models/turtlebot3_model/meshes/lds.dae" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="white"/>
     </visual>
@@ -90,7 +90,7 @@
     <visual name="wheel_left_visual">
       <origin xyz="0 0 0" rpy="1.57 0 0"/>
       <geometry>
-        <mesh filename="package://demo_tb3_urdf/models/turtlebot3_model/meshes/tire.dae" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://demo_tb3/models/turtlebot3_model/meshes/tire.dae" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="white"/>
     </visual>
@@ -118,7 +118,7 @@
     <visual name="wheel_right_visual">
       <origin xyz="0 0 0" rpy="1.57 0 0"/>
       <geometry>
-        <mesh filename="package://demo_tb3_urdf/models/turtlebot3_model/meshes/tire.dae" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://demo_tb3/models/turtlebot3_model/meshes/tire.dae" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="white"/>
     </visual>
