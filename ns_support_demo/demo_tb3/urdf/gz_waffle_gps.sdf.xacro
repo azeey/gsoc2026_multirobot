@@ -215,23 +215,23 @@
           </geometry>
           <surface>
             <friction>
-              <bullet>
+              <ode>
                 <mu>1</mu>
                 <mu2>1</mu2>
                 <slip1>0.035</slip1>
                 <slip2>0</slip2>
                 <fdir1>0 0 1</fdir1>
-              </bullet>
+              </ode>
             </friction>
             <contact>
-              <bullet>
+              <ode>
                 <soft_cfm>0</soft_cfm>
                 <soft_erp>0.2</soft_erp>
                 <kp>1e+5</kp>
                 <kd>1</kd>
                 <max_vel>0.01</max_vel>
                 <min_depth>0.001</min_depth>
-              </bullet>
+              </ode>
             </contact>
           </surface>
         </collision>
@@ -275,23 +275,23 @@
           </geometry>
           <surface>
             <friction>
-              <bullet>
+              <ode>
                 <mu>1</mu>
                 <mu2>1</mu2>
                 <slip1>0.035</slip1>
                 <slip2>0</slip2>
                 <fdir1>0 0 1</fdir1>
-              </bullet>
+              </ode>
             </friction>
             <contact>
-              <bullet>
+              <ode>
                 <soft_cfm>0</soft_cfm>
                 <soft_erp>0.2</soft_erp>
                 <kp>1e+5</kp>
                 <kd>1</kd>
                 <max_vel>0.01</max_vel>
                 <min_depth>0.001</min_depth>
-              </bullet>
+              </ode>
             </contact>
           </surface>
         </collision>
@@ -331,14 +331,14 @@
           </geometry>
           <surface>
             <contact>
-              <bullet>
+              <ode>
                 <soft_cfm>0</soft_cfm>
                 <soft_erp>0.2</soft_erp>
                 <kp>1e+5</kp>
                 <kd>1</kd>
                 <max_vel>0.01</max_vel>
                 <min_depth>0.001</min_depth>
-              </bullet>
+              </ode>
             </contact>
           </surface>
         </collision>
@@ -377,14 +377,14 @@
           </geometry>
           <surface>
             <contact>
-              <bullet>
+              <ode>
                 <soft_cfm>0</soft_cfm>
                 <soft_erp>0.2</soft_erp>
                 <kp>1e+5</kp>
                 <kd>1</kd>
                 <max_vel>0.01</max_vel>
                 <min_depth>0.001</min_depth>
-              </bullet>
+              </ode>
             </contact>
           </surface>
         </collision>
