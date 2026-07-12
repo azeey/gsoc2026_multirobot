@@ -52,7 +52,7 @@
     <include>
       <uri>package://demo_ns_support/models/vehicle_group</uri>
       <name>vehicle_group_1</name>
-      <namespace>__name__</namespace>
+      <namespace>{name}</namespace>
       <pose>0 0 0 0 0 0</pose>
     </include>
   

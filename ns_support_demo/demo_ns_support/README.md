@@ -19,10 +19,10 @@ Each vehicle has these main topics:
 The world creates three groups in different ways:
 
 - `vehicle_group_1` is defined directly in the world sdf file.
-- `vehicle_group_2` is spawned by the `ros_gz_sim create` node with `-ns __name__`.
-- `vehicle_group_3` is spawned by `gz_spawn_model` with `entity_namespace="__name__"`.
+- `vehicle_group_2` is spawned by the `ros_gz_sim create` node with `-ns {name}`.
+- `vehicle_group_3` is spawned by `gz_spawn_model` with `entity_namespace="{name}"`.
 
-`__name__` means the group model name is used as the namespace.
+`{name}` means the group model name is used as the namespace.
 
 ## Run & Check
 

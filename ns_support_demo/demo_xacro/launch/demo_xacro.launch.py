@@ -44,7 +44,7 @@ def generate_launch_description():
                 'xacro', ' ', vehicle_group_xacro, ' ', 'name:=vehicle_group_3',
             ]),
             entity_name='vehicle_group_3',
-            entity_namespace='__name__',
+            entity_namespace='{name}',
             allow_renaming='false',
             x='6.0',
             y='0.0',
