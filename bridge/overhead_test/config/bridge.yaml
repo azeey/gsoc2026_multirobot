@@ -1,0 +1,647 @@
+- topic_name: "/vehicle_group_1/banana/cmd_vel"
+  ros_type_name: "geometry_msgs/msg/Twist"
+  gz_type_name: "gz.msgs.Twist"
+  lazy: true
+  direction: ROS_TO_GZ
+
+- topic_name: "/vehicle_group_1/banana/odometry"
+  ros_type_name: "nav_msgs/msg/Odometry"
+  gz_type_name: "gz.msgs.Odometry"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- ros_topic_name: "/tf"
+  gz_topic_name: "/vehicle_group_1/banana/tf"
+  ros_type_name: "tf2_msgs/msg/TFMessage"
+  gz_type_name: "gz.msgs.Pose_V"
+  direction: GZ_TO_ROS
+
+- topic_name: "/vehicle_group_1/banana/enable"
+  ros_type_name: "std_msgs/msg/Bool"
+  gz_type_name: "gz.msgs.Boolean"
+  lazy: true
+  direction: ROS_TO_GZ
+
+- topic_name: "/vehicle_group_1/banana/imu"
+  ros_type_name: "sensor_msgs/msg/Imu"
+  gz_type_name: "gz.msgs.IMU"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- topic_name: "/vehicle_group_1/banana/camera_info"
+  ros_type_name: "sensor_msgs/msg/CameraInfo"
+  gz_type_name: "gz.msgs.CameraInfo"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- topic_name: "/vehicle_group_1/banana/image"
+  ros_type_name: "sensor_msgs/msg/Image"
+  gz_type_name: "gz.msgs.Image"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- topic_name: "/vehicle_group_1/banana/depth_image"
+  ros_type_name: "sensor_msgs/msg/Image"
+  gz_type_name: "gz.msgs.Image"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- topic_name: "/vehicle_group_1/banana/points"
+  ros_type_name: "sensor_msgs/msg/PointCloud2"
+  gz_type_name: "gz.msgs.PointCloudPacked"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- topic_name: "/vehicle_group_1/orange/cmd_vel"
+  ros_type_name: "geometry_msgs/msg/Twist"
+  gz_type_name: "gz.msgs.Twist"
+  lazy: true
+  direction: ROS_TO_GZ
+
+- topic_name: "/vehicle_group_1/orange/odometry"
+  ros_type_name: "nav_msgs/msg/Odometry"
+  gz_type_name: "gz.msgs.Odometry"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- ros_topic_name: "/tf"
+  gz_topic_name: "/vehicle_group_1/orange/tf"
+  ros_type_name: "tf2_msgs/msg/TFMessage"
+  gz_type_name: "gz.msgs.Pose_V"
+  direction: GZ_TO_ROS
+
+- topic_name: "/vehicle_group_1/orange/enable"
+  ros_type_name: "std_msgs/msg/Bool"
+  gz_type_name: "gz.msgs.Boolean"
+  lazy: true
+  direction: ROS_TO_GZ
+
+- topic_name: "/vehicle_group_1/orange/imu"
+  ros_type_name: "sensor_msgs/msg/Imu"
+  gz_type_name: "gz.msgs.IMU"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- topic_name: "/vehicle_group_1/orange/camera_info"
+  ros_type_name: "sensor_msgs/msg/CameraInfo"
+  gz_type_name: "gz.msgs.CameraInfo"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- topic_name: "/vehicle_group_1/orange/image"
+  ros_type_name: "sensor_msgs/msg/Image"
+  gz_type_name: "gz.msgs.Image"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- topic_name: "/vehicle_group_1/orange/depth_image"
+  ros_type_name: "sensor_msgs/msg/Image"
+  gz_type_name: "gz.msgs.Image"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- topic_name: "/vehicle_group_1/orange/points"
+  ros_type_name: "sensor_msgs/msg/PointCloud2"
+  gz_type_name: "gz.msgs.PointCloudPacked"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- topic_name: "/vehicle_group_1/grape/cmd_vel"
+  ros_type_name: "geometry_msgs/msg/Twist"
+  gz_type_name: "gz.msgs.Twist"
+  lazy: true
+  direction: ROS_TO_GZ
+
+- topic_name: "/vehicle_group_1/grape/odometry"
+  ros_type_name: "nav_msgs/msg/Odometry"
+  gz_type_name: "gz.msgs.Odometry"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- ros_topic_name: "/tf"
+  gz_topic_name: "/vehicle_group_1/grape/tf"
+  ros_type_name: "tf2_msgs/msg/TFMessage"
+  gz_type_name: "gz.msgs.Pose_V"
+  direction: GZ_TO_ROS
+
+- topic_name: "/vehicle_group_1/grape/enable"
+  ros_type_name: "std_msgs/msg/Bool"
+  gz_type_name: "gz.msgs.Boolean"
+  lazy: true
+  direction: ROS_TO_GZ
+
+- topic_name: "/vehicle_group_1/grape/imu"
+  ros_type_name: "sensor_msgs/msg/Imu"
+  gz_type_name: "gz.msgs.IMU"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- topic_name: "/vehicle_group_1/grape/camera_info"
+  ros_type_name: "sensor_msgs/msg/CameraInfo"
+  gz_type_name: "gz.msgs.CameraInfo"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- topic_name: "/vehicle_group_1/grape/image"
+  ros_type_name: "sensor_msgs/msg/Image"
+  gz_type_name: "gz.msgs.Image"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- topic_name: "/vehicle_group_1/grape/depth_image"
+  ros_type_name: "sensor_msgs/msg/Image"
+  gz_type_name: "gz.msgs.Image"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- topic_name: "/vehicle_group_1/grape/points"
+  ros_type_name: "sensor_msgs/msg/PointCloud2"
+  gz_type_name: "gz.msgs.PointCloudPacked"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- topic_name: "/vehicle_group_2/banana/cmd_vel"
+  ros_type_name: "geometry_msgs/msg/Twist"
+  gz_type_name: "gz.msgs.Twist"
+  lazy: true
+  direction: ROS_TO_GZ
+
+- topic_name: "/vehicle_group_2/banana/odometry"
+  ros_type_name: "nav_msgs/msg/Odometry"
+  gz_type_name: "gz.msgs.Odometry"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- ros_topic_name: "/tf"
+  gz_topic_name: "/vehicle_group_2/banana/tf"
+  ros_type_name: "tf2_msgs/msg/TFMessage"
+  gz_type_name: "gz.msgs.Pose_V"
+  direction: GZ_TO_ROS
+
+- topic_name: "/vehicle_group_2/banana/enable"
+  ros_type_name: "std_msgs/msg/Bool"
+  gz_type_name: "gz.msgs.Boolean"
+  lazy: true
+  direction: ROS_TO_GZ
+
+- topic_name: "/vehicle_group_2/banana/imu"
+  ros_type_name: "sensor_msgs/msg/Imu"
+  gz_type_name: "gz.msgs.IMU"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- topic_name: "/vehicle_group_2/banana/camera_info"
+  ros_type_name: "sensor_msgs/msg/CameraInfo"
+  gz_type_name: "gz.msgs.CameraInfo"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- topic_name: "/vehicle_group_2/banana/image"
+  ros_type_name: "sensor_msgs/msg/Image"
+  gz_type_name: "gz.msgs.Image"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- topic_name: "/vehicle_group_2/banana/depth_image"
+  ros_type_name: "sensor_msgs/msg/Image"
+  gz_type_name: "gz.msgs.Image"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- topic_name: "/vehicle_group_2/banana/points"
+  ros_type_name: "sensor_msgs/msg/PointCloud2"
+  gz_type_name: "gz.msgs.PointCloudPacked"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- topic_name: "/vehicle_group_2/orange/cmd_vel"
+  ros_type_name: "geometry_msgs/msg/Twist"
+  gz_type_name: "gz.msgs.Twist"
+  lazy: true
+  direction: ROS_TO_GZ
+
+- topic_name: "/vehicle_group_2/orange/odometry"
+  ros_type_name: "nav_msgs/msg/Odometry"
+  gz_type_name: "gz.msgs.Odometry"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- ros_topic_name: "/tf"
+  gz_topic_name: "/vehicle_group_2/orange/tf"
+  ros_type_name: "tf2_msgs/msg/TFMessage"
+  gz_type_name: "gz.msgs.Pose_V"
+  direction: GZ_TO_ROS
+
+- topic_name: "/vehicle_group_2/orange/enable"
+  ros_type_name: "std_msgs/msg/Bool"
+  gz_type_name: "gz.msgs.Boolean"
+  lazy: true
+  direction: ROS_TO_GZ
+
+- topic_name: "/vehicle_group_2/orange/imu"
+  ros_type_name: "sensor_msgs/msg/Imu"
+  gz_type_name: "gz.msgs.IMU"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- topic_name: "/vehicle_group_2/orange/camera_info"
+  ros_type_name: "sensor_msgs/msg/CameraInfo"
+  gz_type_name: "gz.msgs.CameraInfo"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- topic_name: "/vehicle_group_2/orange/image"
+  ros_type_name: "sensor_msgs/msg/Image"
+  gz_type_name: "gz.msgs.Image"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- topic_name: "/vehicle_group_2/orange/depth_image"
+  ros_type_name: "sensor_msgs/msg/Image"
+  gz_type_name: "gz.msgs.Image"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- topic_name: "/vehicle_group_2/orange/points"
+  ros_type_name: "sensor_msgs/msg/PointCloud2"
+  gz_type_name: "gz.msgs.PointCloudPacked"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- topic_name: "/vehicle_group_2/grape/cmd_vel"
+  ros_type_name: "geometry_msgs/msg/Twist"
+  gz_type_name: "gz.msgs.Twist"
+  lazy: true
+  direction: ROS_TO_GZ
+
+- topic_name: "/vehicle_group_2/grape/odometry"
+  ros_type_name: "nav_msgs/msg/Odometry"
+  gz_type_name: "gz.msgs.Odometry"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- ros_topic_name: "/tf"
+  gz_topic_name: "/vehicle_group_2/grape/tf"
+  ros_type_name: "tf2_msgs/msg/TFMessage"
+  gz_type_name: "gz.msgs.Pose_V"
+  direction: GZ_TO_ROS
+
+- topic_name: "/vehicle_group_2/grape/enable"
+  ros_type_name: "std_msgs/msg/Bool"
+  gz_type_name: "gz.msgs.Boolean"
+  lazy: true
+  direction: ROS_TO_GZ
+
+- topic_name: "/vehicle_group_2/grape/imu"
+  ros_type_name: "sensor_msgs/msg/Imu"
+  gz_type_name: "gz.msgs.IMU"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- topic_name: "/vehicle_group_2/grape/camera_info"
+  ros_type_name: "sensor_msgs/msg/CameraInfo"
+  gz_type_name: "gz.msgs.CameraInfo"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- topic_name: "/vehicle_group_2/grape/image"
+  ros_type_name: "sensor_msgs/msg/Image"
+  gz_type_name: "gz.msgs.Image"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- topic_name: "/vehicle_group_2/grape/depth_image"
+  ros_type_name: "sensor_msgs/msg/Image"
+  gz_type_name: "gz.msgs.Image"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- topic_name: "/vehicle_group_2/grape/points"
+  ros_type_name: "sensor_msgs/msg/PointCloud2"
+  gz_type_name: "gz.msgs.PointCloudPacked"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- topic_name: "/vehicle_group_3/banana/cmd_vel"
+  ros_type_name: "geometry_msgs/msg/Twist"
+  gz_type_name: "gz.msgs.Twist"
+  lazy: true
+  direction: ROS_TO_GZ
+
+- topic_name: "/vehicle_group_3/banana/odometry"
+  ros_type_name: "nav_msgs/msg/Odometry"
+  gz_type_name: "gz.msgs.Odometry"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- ros_topic_name: "/tf"
+  gz_topic_name: "/vehicle_group_3/banana/tf"
+  ros_type_name: "tf2_msgs/msg/TFMessage"
+  gz_type_name: "gz.msgs.Pose_V"
+  direction: GZ_TO_ROS
+
+- topic_name: "/vehicle_group_3/banana/enable"
+  ros_type_name: "std_msgs/msg/Bool"
+  gz_type_name: "gz.msgs.Boolean"
+  lazy: true
+  direction: ROS_TO_GZ
+
+- topic_name: "/vehicle_group_3/banana/imu"
+  ros_type_name: "sensor_msgs/msg/Imu"
+  gz_type_name: "gz.msgs.IMU"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- topic_name: "/vehicle_group_3/banana/camera_info"
+  ros_type_name: "sensor_msgs/msg/CameraInfo"
+  gz_type_name: "gz.msgs.CameraInfo"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- topic_name: "/vehicle_group_3/banana/image"
+  ros_type_name: "sensor_msgs/msg/Image"
+  gz_type_name: "gz.msgs.Image"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- topic_name: "/vehicle_group_3/banana/depth_image"
+  ros_type_name: "sensor_msgs/msg/Image"
+  gz_type_name: "gz.msgs.Image"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- topic_name: "/vehicle_group_3/banana/points"
+  ros_type_name: "sensor_msgs/msg/PointCloud2"
+  gz_type_name: "gz.msgs.PointCloudPacked"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- topic_name: "/vehicle_group_3/orange/cmd_vel"
+  ros_type_name: "geometry_msgs/msg/Twist"
+  gz_type_name: "gz.msgs.Twist"
+  lazy: true
+  direction: ROS_TO_GZ
+
+- topic_name: "/vehicle_group_3/orange/odometry"
+  ros_type_name: "nav_msgs/msg/Odometry"
+  gz_type_name: "gz.msgs.Odometry"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- ros_topic_name: "/tf"
+  gz_topic_name: "/vehicle_group_3/orange/tf"
+  ros_type_name: "tf2_msgs/msg/TFMessage"
+  gz_type_name: "gz.msgs.Pose_V"
+  direction: GZ_TO_ROS
+
+- topic_name: "/vehicle_group_3/orange/enable"
+  ros_type_name: "std_msgs/msg/Bool"
+  gz_type_name: "gz.msgs.Boolean"
+  lazy: true
+  direction: ROS_TO_GZ
+
+- topic_name: "/vehicle_group_3/orange/imu"
+  ros_type_name: "sensor_msgs/msg/Imu"
+  gz_type_name: "gz.msgs.IMU"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- topic_name: "/vehicle_group_3/orange/camera_info"
+  ros_type_name: "sensor_msgs/msg/CameraInfo"
+  gz_type_name: "gz.msgs.CameraInfo"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- topic_name: "/vehicle_group_3/orange/image"
+  ros_type_name: "sensor_msgs/msg/Image"
+  gz_type_name: "gz.msgs.Image"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- topic_name: "/vehicle_group_3/orange/depth_image"
+  ros_type_name: "sensor_msgs/msg/Image"
+  gz_type_name: "gz.msgs.Image"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- topic_name: "/vehicle_group_3/orange/points"
+  ros_type_name: "sensor_msgs/msg/PointCloud2"
+  gz_type_name: "gz.msgs.PointCloudPacked"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- topic_name: "/vehicle_group_3/grape/cmd_vel"
+  ros_type_name: "geometry_msgs/msg/Twist"
+  gz_type_name: "gz.msgs.Twist"
+  lazy: true
+  direction: ROS_TO_GZ
+
+- topic_name: "/vehicle_group_3/grape/odometry"
+  ros_type_name: "nav_msgs/msg/Odometry"
+  gz_type_name: "gz.msgs.Odometry"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- ros_topic_name: "/tf"
+  gz_topic_name: "/vehicle_group_3/grape/tf"
+  ros_type_name: "tf2_msgs/msg/TFMessage"
+  gz_type_name: "gz.msgs.Pose_V"
+  direction: GZ_TO_ROS
+
+- topic_name: "/vehicle_group_3/grape/enable"
+  ros_type_name: "std_msgs/msg/Bool"
+  gz_type_name: "gz.msgs.Boolean"
+  lazy: true
+  direction: ROS_TO_GZ
+
+- topic_name: "/vehicle_group_3/grape/imu"
+  ros_type_name: "sensor_msgs/msg/Imu"
+  gz_type_name: "gz.msgs.IMU"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- topic_name: "/vehicle_group_3/grape/camera_info"
+  ros_type_name: "sensor_msgs/msg/CameraInfo"
+  gz_type_name: "gz.msgs.CameraInfo"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- topic_name: "/vehicle_group_3/grape/image"
+  ros_type_name: "sensor_msgs/msg/Image"
+  gz_type_name: "gz.msgs.Image"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- topic_name: "/vehicle_group_3/grape/depth_image"
+  ros_type_name: "sensor_msgs/msg/Image"
+  gz_type_name: "gz.msgs.Image"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- topic_name: "/vehicle_group_3/grape/points"
+  ros_type_name: "sensor_msgs/msg/PointCloud2"
+  gz_type_name: "gz.msgs.PointCloudPacked"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- topic_name: "/vehicle_group_4/banana/cmd_vel"
+  ros_type_name: "geometry_msgs/msg/Twist"
+  gz_type_name: "gz.msgs.Twist"
+  lazy: true
+  direction: ROS_TO_GZ
+
+- topic_name: "/vehicle_group_4/banana/odometry"
+  ros_type_name: "nav_msgs/msg/Odometry"
+  gz_type_name: "gz.msgs.Odometry"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- ros_topic_name: "/tf"
+  gz_topic_name: "/vehicle_group_4/banana/tf"
+  ros_type_name: "tf2_msgs/msg/TFMessage"
+  gz_type_name: "gz.msgs.Pose_V"
+  direction: GZ_TO_ROS
+
+- topic_name: "/vehicle_group_4/banana/enable"
+  ros_type_name: "std_msgs/msg/Bool"
+  gz_type_name: "gz.msgs.Boolean"
+  lazy: true
+  direction: ROS_TO_GZ
+
+- topic_name: "/vehicle_group_4/banana/imu"
+  ros_type_name: "sensor_msgs/msg/Imu"
+  gz_type_name: "gz.msgs.IMU"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- topic_name: "/vehicle_group_4/banana/camera_info"
+  ros_type_name: "sensor_msgs/msg/CameraInfo"
+  gz_type_name: "gz.msgs.CameraInfo"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- topic_name: "/vehicle_group_4/banana/image"
+  ros_type_name: "sensor_msgs/msg/Image"
+  gz_type_name: "gz.msgs.Image"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- topic_name: "/vehicle_group_4/banana/depth_image"
+  ros_type_name: "sensor_msgs/msg/Image"
+  gz_type_name: "gz.msgs.Image"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- topic_name: "/vehicle_group_4/banana/points"
+  ros_type_name: "sensor_msgs/msg/PointCloud2"
+  gz_type_name: "gz.msgs.PointCloudPacked"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- topic_name: "/vehicle_group_4/orange/cmd_vel"
+  ros_type_name: "geometry_msgs/msg/Twist"
+  gz_type_name: "gz.msgs.Twist"
+  lazy: true
+  direction: ROS_TO_GZ
+
+- topic_name: "/vehicle_group_4/orange/odometry"
+  ros_type_name: "nav_msgs/msg/Odometry"
+  gz_type_name: "gz.msgs.Odometry"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- ros_topic_name: "/tf"
+  gz_topic_name: "/vehicle_group_4/orange/tf"
+  ros_type_name: "tf2_msgs/msg/TFMessage"
+  gz_type_name: "gz.msgs.Pose_V"
+  direction: GZ_TO_ROS
+
+- topic_name: "/vehicle_group_4/orange/enable"
+  ros_type_name: "std_msgs/msg/Bool"
+  gz_type_name: "gz.msgs.Boolean"
+  lazy: true
+  direction: ROS_TO_GZ
+
+- topic_name: "/vehicle_group_4/orange/imu"
+  ros_type_name: "sensor_msgs/msg/Imu"
+  gz_type_name: "gz.msgs.IMU"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- topic_name: "/vehicle_group_4/orange/camera_info"
+  ros_type_name: "sensor_msgs/msg/CameraInfo"
+  gz_type_name: "gz.msgs.CameraInfo"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- topic_name: "/vehicle_group_4/orange/image"
+  ros_type_name: "sensor_msgs/msg/Image"
+  gz_type_name: "gz.msgs.Image"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- topic_name: "/vehicle_group_4/orange/depth_image"
+  ros_type_name: "sensor_msgs/msg/Image"
+  gz_type_name: "gz.msgs.Image"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- topic_name: "/vehicle_group_4/orange/points"
+  ros_type_name: "sensor_msgs/msg/PointCloud2"
+  gz_type_name: "gz.msgs.PointCloudPacked"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- topic_name: "/vehicle_group_4/grape/cmd_vel"
+  ros_type_name: "geometry_msgs/msg/Twist"
+  gz_type_name: "gz.msgs.Twist"
+  lazy: true
+  direction: ROS_TO_GZ
+
+- topic_name: "/vehicle_group_4/grape/odometry"
+  ros_type_name: "nav_msgs/msg/Odometry"
+  gz_type_name: "gz.msgs.Odometry"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- ros_topic_name: "/tf"
+  gz_topic_name: "/vehicle_group_4/grape/tf"
+  ros_type_name: "tf2_msgs/msg/TFMessage"
+  gz_type_name: "gz.msgs.Pose_V"
+  direction: GZ_TO_ROS
+
+- topic_name: "/vehicle_group_4/grape/enable"
+  ros_type_name: "std_msgs/msg/Bool"
+  gz_type_name: "gz.msgs.Boolean"
+  lazy: true
+  direction: ROS_TO_GZ
+
+- topic_name: "/vehicle_group_4/grape/imu"
+  ros_type_name: "sensor_msgs/msg/Imu"
+  gz_type_name: "gz.msgs.IMU"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- topic_name: "/vehicle_group_4/grape/camera_info"
+  ros_type_name: "sensor_msgs/msg/CameraInfo"
+  gz_type_name: "gz.msgs.CameraInfo"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- topic_name: "/vehicle_group_4/grape/image"
+  ros_type_name: "sensor_msgs/msg/Image"
+  gz_type_name: "gz.msgs.Image"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- topic_name: "/vehicle_group_4/grape/depth_image"
+  ros_type_name: "sensor_msgs/msg/Image"
+  gz_type_name: "gz.msgs.Image"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- topic_name: "/vehicle_group_4/grape/points"
+  ros_type_name: "sensor_msgs/msg/PointCloud2"
+  gz_type_name: "gz.msgs.PointCloudPacked"
+  lazy: true
+  direction: GZ_TO_ROS
