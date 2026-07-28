@@ -109,8 +109,7 @@ The incomplete result is most likely caused by the asynchronous nature of Gazebo
 1. clears the cached remote subscriber information,
 2. sends a `SUBSCRIBERS_REQ` discovery message,
 3. waits for initialization,
-4. waits only a short fixed time,
-5. reads local topic information and the currently received remote subscriber cache.
+4. reads local topic information and the currently received remote subscriber cache.
 
 This means `TopicList()` is effectively taking a snapshot while discovery replies are still in flight. Subscriber-only topics are especially sensitive to this because they depend on remote subscriber discovery data rather than only on local `info` storage ([private: TopicStorage<Pub> info](https://github.com/gazebosim/gz-transport/blob/11b728b6c7073cde958a7f28cc9952da19fcb697/src/Discovery.hh#L1702)).
 
