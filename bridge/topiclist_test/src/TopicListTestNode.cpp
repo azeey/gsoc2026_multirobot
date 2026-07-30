@@ -30,17 +30,17 @@ private:
     "/rgbd_camera/points",
     "/sensors/marker",
     "/stats",
-    "/world/multi_robot/clock",
-    "/world/multi_robot/dynamic_pose/info",
-    "/world/multi_robot/pose/info",   
-    "/world/multi_robot/scene/deletion",
-    "/world/multi_robot/scene/info",
-    "/world/multi_robot/state",
-    "/world/multi_robot/stats",
+    "/world/test_world/clock",
+    "/world/test_world/dynamic_pose/info",
+    "/world/test_world/pose/info",   
+    "/world/test_world/scene/deletion",
+    "/world/test_world/scene/info",
+    "/world/test_world/state",
+    "/world/test_world/stats",
     "/model/vehicle/cmd_vel",
     "/model/vehicle/enable",
-    "/world/multi_robot/light_config",
-    "/world/multi_robot/material_color"
+    "/world/test_world/light_config",
+    "/world/test_world/material_color"
   };
 };
 
