@@ -1,8 +1,6 @@
 <?xml version="1.0" ?>
 <sdf version="1.12">
   <model name="vehicle_group">
-    <link name="dummy_link"/>
-
     <include>
       <name>vehicle_1</name>
       <namespace>banana</namespace>

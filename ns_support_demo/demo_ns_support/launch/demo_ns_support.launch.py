@@ -15,6 +15,7 @@ def generate_launch_description():
     vehicle_group_file = os.path.join(pkg_share, 'models', 'vehicle_group', 'model.sdf')
     bridge_config = os.path.join(pkg_share, 'config', 'bridge.yaml')
 
+    groups = ('vehicle_group_1', 'vehicle_group_2', 'vehicle_group_3')
     actions = [
         GzServer(
             world_sdf_file=world_file,
@@ -27,8 +28,8 @@ def generate_launch_description():
             arguments=[
                 '-world', 'multi_robot',
                 '-file', vehicle_group_file,
-                '-name', 'vehicle_group_2',
-                '-ns', '{name}',
+                '-name', groups[1],
+                '-ns', groups[1],
                 '-x', '3.0',
                 '-y', '0.0',
                 '-z', '0.0',
@@ -39,8 +40,8 @@ def generate_launch_description():
         GzSpawnModel(
             world='multi_robot',
             file=vehicle_group_file,
-            entity_name='vehicle_group_3',
-            entity_namespace='{name}',
+            entity_name=groups[2],
+            entity_namespace=groups[2],
             allow_renaming='false',
             x='6.0',
             y='0.0',
@@ -49,7 +50,6 @@ def generate_launch_description():
         ),
     ]
 
-    groups = ('vehicle_group_1', 'vehicle_group_2', 'vehicle_group_3')
     vehicles = ('banana', 'orange', 'grape')
 
     actions.extend(
