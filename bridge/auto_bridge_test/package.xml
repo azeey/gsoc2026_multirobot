@@ -1,0 +1,23 @@
+<package format="3">
+  <name>auto_bridge_test</name>
+  <version>0.0.0</version>
+  <description>TODO</description>
+  <license>Apache 2.0</license>
+  <maintainer email="1409947012@qq.com">C88-YQ</maintainer>
+
+  <buildtool_depend>ament_cmake_auto</buildtool_depend>
+
+  <depend>rclcpp</depend>
+  <depend>rclcpp_components</depend>
+  <depend>gz-transport</depend>
+  <depend>geometry_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>std_msgs</depend>
+  <depend>rosgraph_msgs</depend>
+  <depend>nav_msgs</depend>
+  <depend>tf2_msgs</depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

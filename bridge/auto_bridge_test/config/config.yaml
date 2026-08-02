@@ -1,0 +1,34 @@
+ros_pub_sub_node:
+  ros__parameters:
+    clock_sub:
+      enable: true
+      topic: /clock
+    imu_sub:
+      enable: true
+      topic: /imu
+    rgbd_camera:
+      camera_info_sub:
+        enable: true
+        topic: /rgbd_camera/camera_info
+      depth_image_sub:
+        enable: true
+        topic: /rgbd_camera/depth_image
+      image_sub:
+        enable: true
+        topic: /rgbd_camera/image
+      points_sub:
+        enable: true
+        topic: /rgbd_camera/points
+    vehicle:
+      odom_sub:
+        enable: true
+        topic: /model/vehicle/odometry
+      tf_sub:
+        enable: true
+        topic: /model/vehicle/tf
+      cmd_vel_pub:
+        enable: true
+        topic: /model/vehicle/cmd_vel
+      enable_pub:
+        enable: true
+        topic: /model/vehicle/enable
