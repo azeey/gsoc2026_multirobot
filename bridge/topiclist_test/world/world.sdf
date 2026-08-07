@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 
 <sdf version="1.12">
-  <world name="test_world">
+  <world name="default">
 
     <plugin
       filename="gz-sim-imu-system"

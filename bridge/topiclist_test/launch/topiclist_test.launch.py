@@ -73,7 +73,7 @@ def generate_launch_description():
     ld.add_action(declare_use_composition)
     ld.add_action(declare_freq)
     ld.add_action(gz_server)
-    ld.add_action(gz_gui)
+    # ld.add_action(gz_gui)
     ld.add_action(load_node)
     ld.add_action(load_composable_node)
     return ld
