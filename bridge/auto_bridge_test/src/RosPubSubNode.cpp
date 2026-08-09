@@ -43,7 +43,7 @@ typename rclcpp::Subscription<T>::SharedPtr RosPubSubNode::create_sub(
     topic_name,
     qos,
     [this, topic_name](const typename T::SharedPtr msg) {
-      RCLCPP_INFO(this->get_logger(), "Received message on topic: %s", topic_name.c_str());
+      RCLCPP_INFO_ONCE(this->get_logger(), "Received message on topic: %s", topic_name.c_str());
     });
 
   return sub;
