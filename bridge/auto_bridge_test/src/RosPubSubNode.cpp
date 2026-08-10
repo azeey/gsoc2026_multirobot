@@ -12,6 +12,10 @@
 #include <geometry_msgs/msg/twist.hpp>
 #include <std_msgs/msg/bool.hpp>
 
+#include <ros_gz_interfaces/srv/control_world.hpp>
+#include <ros_gz_interfaces/srv/delete_entity.hpp>
+#include <ros_gz_interfaces/srv/spawn_entity.hpp>
+#include <ros_gz_interfaces/srv/set_entity_pose.hpp>
 
 namespace ros_pub_sub_node
 {
@@ -27,9 +31,10 @@ private:
   typename rclcpp::Subscription<T>::SharedPtr create_sub(
     const std::string & topic_name,
     const rclcpp::QoS & qos = rclcpp::QoS(10));
+
   std::vector<rclcpp::SubscriptionBase::SharedPtr> subs_;
   std::vector<rclcpp::PublisherBase::SharedPtr> pubs_;
-  
+  std::vector<rclcpp::ClientBase::SharedPtr> clients_;
 };
 
 template<typename T>
@@ -121,6 +126,30 @@ RosPubSubNode::RosPubSubNode(const rclcpp::NodeOptions & options)
     std::string enable_pub_topic = this->declare_parameter("vehicle.enable_pub.topic", "/model/vehicle/enable");
     pubs_.push_back(this->create_publisher<std_msgs::msg::Bool>(enable_pub_topic, 10));
     RCLCPP_INFO(this->get_logger(), "Created publisher for topic: %s", enable_pub_topic.c_str());
+  }
+  bool control_world_client_enable = this->declare_parameter("control_world_client.enable", false);
+  if (control_world_client_enable)
+  {
+    std::string control_world_client_service = this->declare_parameter("control_world_client.service", "/world/default/control_world");
+    clients_.push_back(this->create_client<ros_gz_interfaces::srv::ControlWorld>(control_world_client_service));
+  }
+  bool remove_entity_client_enable = this->declare_parameter("remove_entity_client.enable", false);
+  if (remove_entity_client_enable)
+  {
+    std::string remove_entity_client_service = this->declare_parameter("remove_entity_client.service", "/world/default/remove");
+    clients_.push_back(this->create_client<ros_gz_interfaces::srv::DeleteEntity>(remove_entity_client_service));
+  }
+  bool spawn_entity_client_enable = this->declare_parameter("spawn_entity_client.enable", false);
+  if (spawn_entity_client_enable)
+  {
+    std::string spawn_entity_client_service = this->declare_parameter("spawn_entity_client.service", "/world/default/spawn");
+    clients_.push_back(this->create_client<ros_gz_interfaces::srv::SpawnEntity>(spawn_entity_client_service));
+  }
+  bool set_entity_pose_client_enable = this->declare_parameter("set_entity_pose_client.enable", false);
+  if (set_entity_pose_client_enable)
+  {
+    std::string set_entity_pose_client_service = this->declare_parameter("set_entity_pose_client.service", "/world/default/set_pose");
+    clients_.push_back(this->create_client<ros_gz_interfaces::srv::SetEntityPose>(set_entity_pose_client_service));
   }
 }
 

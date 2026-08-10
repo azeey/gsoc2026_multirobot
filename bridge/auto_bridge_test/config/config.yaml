@@ -32,3 +32,15 @@ ros_pub_sub_node:
       enable_pub:
         enable: true
         topic: /model/vehicle/enable
+    control_world_client:
+      enable: true
+      service: /world/test_world/control
+    remove_entity_client:
+      enable: true
+      service: /world/test_world/remove
+    spawn_entity_client:
+      enable: true
+      service: /world/test_world/create
+    set_entity_pose_client:
+      enable: true
+      service: /world/test_world/set_pose
