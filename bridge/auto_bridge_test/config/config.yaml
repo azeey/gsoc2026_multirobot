@@ -44,3 +44,12 @@ ros_pub_sub_node:
     set_entity_pose_client:
       enable: true
       service: /world/test_world/set_pose
+
+ros_gz_bridge:
+  ros__parameters:
+    expand_gz_topic_names: false
+    automated_bridge:
+      enable: true
+      exclude_patterns:
+        - ".*camera.*"
+        - "/clock"
