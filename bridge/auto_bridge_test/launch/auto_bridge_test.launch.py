@@ -47,7 +47,8 @@ def generate_launch_description():
         container_name=container_name,
         bridge_params =[
             {'expand_gz_topic_names': False},
-            {'enable_automated_bridge': True}
+            {'enable_automated_bridge': True},
+            {'automated_bridge_exclude_patterns': ['.*camera.*', '/clock']}
         ]
     )
 
