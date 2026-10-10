@@ -138,7 +138,6 @@
       <uri>package://warehouse/models/JettyWorld</uri>
     </include>
 
-    <!-- 纵移 -->
     <include>
       <uri>package://warehouse/models/Mecanumlift</uri>
       <name>vehicle_1</name>
@@ -146,7 +145,6 @@
       <pose>0 -9.2 0 0 0 0</pose>
     </include>
 
-    <!-- 转向 -->
     <include>
       <uri>package://warehouse/models/Mecanumlift</uri>
       <name>vehicle_2</name>
@@ -154,7 +152,6 @@
       <pose>8.19 -3.63 0 0 0 0</pose>
     </include>
 
-    <!-- 横移 -->
     <include>
       <uri>package://warehouse/models/Mecanumlift</uri>
       <name>vehicle_3</name>
@@ -162,7 +159,6 @@
       <pose>15.15 3.21 0 0 0 1.57</pose>
     </include>
 
-    <!-- 横移 -->
     <include>
       <uri>package://warehouse/models/Mecanumlift</uri>
       <name>vehicle_4</name>
