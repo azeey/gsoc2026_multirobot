@@ -794,69 +794,6 @@
 
     <include>
       <static>true</static>
-      <name>Handtruck_01</name>
-      <uri>http://fuel.gazebosim.org/1.0/OpenRobotics/models/Handtruck_01</uri>
-      <pose>-7.4130 6.9018 0.0000 0.0000 -0.0000 -3.0926</pose>
-    </include>
-
-    <include>
-      <static>true</static>
-      <name>Handtruck_01.001</name>
-      <uri>http://fuel.gazebosim.org/1.0/OpenRobotics/models/Handtruck_01</uri>
-      <pose>10.1366 14.4086 0.0000 0.0000 -0.0000 -3.0926</pose>
-    </include>
-
-    <include>
-      <static>true</static>
-      <name>Handtruck_01.002</name>
-      <uri>http://fuel.gazebosim.org/1.0/OpenRobotics/models/Handtruck_01</uri>
-      <pose>14.8018 31.6403 0.0000 0.0000 -0.0000 -0.9649</pose>
-    </include>
-
-    <include>
-      <static>true</static>
-      <name>Handtruck_01.003</name>
-      <uri>http://fuel.gazebosim.org/1.0/OpenRobotics/models/Handtruck_01</uri>
-      <pose>0.3280 4.1175 0.0000 0.0000 -0.0000 0.7851</pose>
-    </include>
-
-    <include>
-      <static>true</static>
-      <name>Handtruck_02</name>
-      <uri>http://fuel.gazebosim.org/1.0/OpenRobotics/models/Handtruck_02</uri>
-      <pose>15.3440 -0.9353 -0.0000 0.0000 0.0000 -0.5890</pose>
-    </include>
-
-    <include>
-      <static>true</static>
-      <name>Handtruck_02.001</name>
-      <uri>http://fuel.gazebosim.org/1.0/OpenRobotics/models/Handtruck_02</uri>
-      <pose>3.0293 28.5490 0.0000 0.0000 0.0000 -0.5890</pose>
-    </include>
-
-    <include>
-      <static>true</static>
-      <name>Ladder</name>
-      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Ladder_01</uri>
-      <pose>-2.1513 29.0158 0.0000 0.0000 -0.0000 0.7118</pose>
-    </include>
-
-    <include>
-      <static>true</static>
-      <name>Ladder.001</name>
-      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Ladder_01</uri>
-      <pose>-29.9931 -5.1888 0.0000 0.0000 -0.0000 0.0000</pose>
-    </include>
-
-    <include>
-      <static>true</static>
-      <name>Ladder.002</name>
-      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Ladder_01</uri>
-      <pose>18.6162 5.6693 0.0000 0.0000 0.0000 -0.3509</pose>
-    </include>
-
-    <include>
-      <static>true</static>
       <name>Packing_Station</name>
       <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Packing_Station</uri>
       <pose>0.9342 13.0841 0.0000 0.0000 -0.0000 0.0000</pose>
