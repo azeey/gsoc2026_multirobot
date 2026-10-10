@@ -1,0 +1,18 @@
+<package format="3">
+  <name>warehouse</name>
+  <version>0.0.0</version>
+  <description>Warehouse demo</description>
+  <license>Apache 2.0</license>
+  <maintainer email="jyc12888@gmail.com">C88-YQ</maintainer>
+
+  <buildtool_depend>ament_cmake_auto</buildtool_depend>
+
+  <exec_depend>ros_gz</exec_depend>
+  <exec_depend>ros_gz_sim</exec_depend>
+  <exec_depend>ros_gz_bridge</exec_depend>
+  <exec_depend>tf2_ros</exec_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
