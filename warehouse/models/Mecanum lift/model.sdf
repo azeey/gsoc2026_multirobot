@@ -1,8 +1,9 @@
 <?xml version="1.0"?>
-<sdf version="1.7">
+<sdf version="1.12">
     <model name="Mecanum lift" xmlns:ignition="https://ignitionrobotics.org/schema">
         <link name="chassis">
             <inertial>
+                <pose>0.036 0.135 0 0 0 0</pose>
                 <mass>1.14395</mass>
                 <inertia>
                     <ixx>0.126164</ixx>
@@ -14,7 +15,7 @@
                 </inertia>
             </inertial>
             <collision name="scissor">
-                <pose>-0.03 -0.132 0.708 0 0 0</pose>
+                <pose>0.006 0.003 0.708 0 0 0</pose>
                 <geometry>
                     <box>
                         <size>2.04 0.936 0.6</size>
@@ -22,7 +23,7 @@
                 </geometry>
             </collision>
             <collision name="bar_1">
-                <pose>-0.042 0.294 1.98 0 1.57 0</pose>
+                <pose>-0.006 0.429 1.98 0 1.57 0</pose>
                 <geometry>
                     <cylinder>
                         <radius>0.03</radius>
@@ -31,7 +32,7 @@
                 </geometry>
             </collision>
             <collision name="bar_2">
-                <pose>-0.042 0.294 1.578 0 1.57 0</pose>
+                <pose>-0.006 0.429 1.578 0 1.57 0</pose>
                 <geometry>
                     <cylinder>
                         <radius>0.03</radius>
@@ -40,7 +41,7 @@
                 </geometry>
             </collision>
             <collision name="bar_3">
-                <pose>-0.042 -0.558 1.578 0 1.57 0</pose>
+                <pose>-0.006 -0.423 1.578 0 1.57 0</pose>
                 <geometry>
                     <cylinder>
                         <radius>0.03</radius>
@@ -49,7 +50,7 @@
                 </geometry>
             </collision>
             <collision name="bar_4">
-                <pose>-0.042 -0.558 1.98 0 1.57 0</pose>
+                <pose>-0.006 -0.423 1.98 0 1.57 0</pose>
                 <geometry>
                     <cylinder>
                         <radius>0.03</radius>
@@ -58,7 +59,7 @@
                 </geometry>
             </collision>
             <visual name="visual">
-                <pose>0 0 -0.084 1.57 0 0</pose>
+                <pose>0.036 0.135 -0.084 1.57 0 0</pose>
                 <geometry>
                     <mesh>
                         <scale>0.6 0.6 0.6</scale>
@@ -87,7 +88,7 @@
             </visual>
         </link>
         <link name="front_right_wheel">
-            <pose>0.858 -0.552 0.186 0 0 0</pose>
+            <pose>0.894 -0.417 0.186 0 0 0</pose>
             <inertial>
                 <mass>2</mass>
                 <inertia>
@@ -110,7 +111,7 @@
                         <ode>
                             <mu>1.0</mu>
                             <mu2>0.0</mu2>
-                            <fdir1 ignition:expressed_in="chassis">1 1 0</fdir1>
+                            <fdir1 gz:expressed_in="chassis">1 1 0</fdir1>
                         </ode>
                     </friction>
                 </surface>
@@ -130,7 +131,7 @@
             </visual>
         </link>
         <link name="rear_right_wheel">
-            <pose>-0.93 -0.552 0.186 0 0 0</pose>
+            <pose>-0.894 -0.417 0.186 0 0 0</pose>
             <inertial>
                 <mass>2</mass>
                 <inertia>
@@ -153,7 +154,7 @@
                         <ode>
                             <mu>1.0</mu>
                             <mu2>0.0</mu2>
-                            <fdir1 ignition:expressed_in="chassis">1 -1 0</fdir1>
+                            <fdir1 gz:expressed_in="chassis">1 -1 0</fdir1>
                         </ode>
                     </friction>
                 </surface>
@@ -173,7 +174,7 @@
             </visual>
         </link>
         <link name="front_left_wheel">
-            <pose>0.858 0.282 0.186 0 0 0</pose>
+            <pose>0.894 0.417 0.186 0 0 0</pose>
             <inertial>
                 <mass>2</mass>
                 <inertia>
@@ -196,7 +197,7 @@
                         <ode>
                             <mu>1.0</mu>
                             <mu2>0.0</mu2>
-                            <fdir1 ignition:expressed_in="chassis">1 -1 0</fdir1>
+                            <fdir1 gz:expressed_in="chassis">1 -1 0</fdir1>
                         </ode>
                     </friction>
                 </surface>
@@ -216,7 +217,7 @@
             </visual>
         </link>
         <link name="rear_left_wheel">
-            <pose>-0.93 0.282 0.186 0 0 0</pose>
+            <pose>-0.894 0.417 0.186 0 0 0</pose>
             <inertial>
                 <mass>2</mass>
                 <inertia>
@@ -239,7 +240,7 @@
                         <ode>
                             <mu>1.0</mu>
                             <mu2>0.0</mu2>
-                            <fdir1 ignition:expressed_in="chassis">1 1 0</fdir1>
+                            <fdir1 gz:expressed_in="chassis">1 1 0</fdir1>
                         </ode>
                     </friction>
                 </surface>
@@ -311,15 +312,15 @@
             <wheel_separation>0.834</wheel_separation>
             <wheelbase>1.788</wheelbase>
             <wheel_radius>0.18</wheel_radius>
-            <max_linear_velocity>1.6</max_linear_velocity>
-            <max_angular_velocity>0.3</max_angular_velocity>
+            <max_linear_velocity>1.2</max_linear_velocity>
+            <max_angular_velocity>0.4</max_angular_velocity>
         </plugin>
         <plugin filename="gz-sim-drive-to-pose-controller-system"
             name="gz::sim::systems::DriveToPoseController">
             <linear_p_gain>1.0</linear_p_gain>
-            <angular_p_gain>0.5</angular_p_gain>
+            <angular_p_gain>0.4</angular_p_gain>
             <linear_deviation>0.1</linear_deviation>
-            <angular_deviation>0.5</angular_deviation>
+            <angular_deviation>0.1</angular_deviation>
         </plugin>
         <plugin filename="gz-sim-odometry-publisher-system"
             name="gz::sim::systems::OdometryPublisher">
