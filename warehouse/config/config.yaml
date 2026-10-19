@@ -3,8 +3,7 @@ ros_gz_bridge:
     automated_bridge:
       enable: true
       exclude_patterns:
-        - "/clock"
-        - ".*tf"
+        - ".*camera.*"
 
 warehouse_route_controller:
   ros__parameters:

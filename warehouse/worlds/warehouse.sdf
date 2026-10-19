@@ -141,28 +141,28 @@
     <include>
       <uri>package://warehouse/models/Mecanumlift</uri>
       <name>vehicle_1</name>
-      <namespace>{name}</namespace>
+      <namespace>{name}_ns</namespace>
       <pose>0 -9.2 0 0 0 0</pose>
     </include>
 
     <include>
       <uri>package://warehouse/models/Mecanumlift</uri>
       <name>vehicle_2</name>
-      <namespace>{name}</namespace>
+      <namespace>{name}_ns</namespace>
       <pose>8.19 -3.63 0 0 0 0</pose>
     </include>
 
     <include>
       <uri>package://warehouse/models/Mecanumlift</uri>
       <name>vehicle_3</name>
-      <namespace>{name}</namespace>
+      <namespace>{name}_ns</namespace>
       <pose>15.15 3.21 0 0 0 1.57</pose>
     </include>
 
     <include>
       <uri>package://warehouse/models/Mecanumlift</uri>
       <name>vehicle_4</name>
-      <namespace>{name}</namespace>
+      <namespace>{name}_ns</namespace>
       <pose>1.75 9.11 0 0 0 -1.57</pose>
     </include>
   </world>
