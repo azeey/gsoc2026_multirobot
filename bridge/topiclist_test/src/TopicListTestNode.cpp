@@ -91,6 +91,10 @@ private:
     "/world/default/visual_config/blocking",
     "/world/default/wheel_slip",
     "/world/default/wheel_slip/blocking",
+    "/world/default/create_with_ns",
+    "/world/default/create_with_ns/blocking",
+    "/world/default/create_with_ns_multiple",
+    "/world/default/create_with_ns_multiple/blocking",
   };
 };
 
