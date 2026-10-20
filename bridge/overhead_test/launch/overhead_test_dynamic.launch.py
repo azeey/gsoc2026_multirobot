@@ -29,7 +29,7 @@ def generate_launch_description():
         RosGzBridge(
             bridge_name='ros_gz_bridge',
             use_composition=False,
-            bridge_params=[{'automated_bridge.enable': False}],
+            bridge_params=[{'automated_bridge.enable': True}],
         ),
     ]
 

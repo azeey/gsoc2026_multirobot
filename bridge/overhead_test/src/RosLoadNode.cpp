@@ -39,12 +39,6 @@ public:
         const std::string prefix = "/vehicle_group_" + std::to_string(group) + "/" + name;
         subscribe(prefix + "/odometry", static_cast<nav_msgs::msg::Odometry *>(nullptr));
         subscribe(prefix + "/tf", static_cast<tf2_msgs::msg::TFMessage *>(nullptr));
-        // The YAML bridge exposes sensors under these shorter ROS names.
-        subscribe(prefix + "/imu", static_cast<sensor_msgs::msg::Imu *>(nullptr));
-        subscribe(prefix + "/camera_info", static_cast<sensor_msgs::msg::CameraInfo *>(nullptr));
-        subscribe(prefix + "/depth_image", static_cast<sensor_msgs::msg::Image *>(nullptr));
-        subscribe(prefix + "/image", static_cast<sensor_msgs::msg::Image *>(nullptr));
-        subscribe(prefix + "/points", static_cast<sensor_msgs::msg::PointCloud2 *>(nullptr));
         cmd_vel_pubs_.push_back(create_publisher<geometry_msgs::msg::Twist>(prefix + "/cmd_vel", 10));
         enable_pubs_.push_back(create_publisher<std_msgs::msg::Bool>(prefix + "/enable", 10));
       }
