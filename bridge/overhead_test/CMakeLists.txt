@@ -2,37 +2,23 @@ cmake_minimum_required(VERSION 3.5)
 
 project(overhead_test)
 
-find_package(ament_cmake REQUIRED)
+find_package(ament_cmake_auto REQUIRED)
+ament_auto_find_build_dependencies()
 
-if(BUILD_TESTING)
-  find_package(ament_lint_auto REQUIRED)
-  ament_lint_auto_find_test_dependencies()
-endif()
-
-install(
-  DIRECTORY
-    config/
-  DESTINATION share/${PROJECT_NAME}/config
+ament_auto_add_library(${PROJECT_NAME} SHARED
+  src/RosLoadNode.cpp
 )
 
-install(
-  DIRECTORY
-    launch/
-  DESTINATION share/${PROJECT_NAME}/launch
-)
-
-install(
-  DIRECTORY
-    models/
-  DESTINATION share/${PROJECT_NAME}/models
-)
-
-install(
-  DIRECTORY
-    worlds/
-  DESTINATION share/${PROJECT_NAME}/worlds
-)
+rclcpp_components_register_node(${PROJECT_NAME}
+  PLUGIN "RosLoadNode"
+  EXECUTABLE ros_load_node)
 
 ament_environment_hooks("${CMAKE_CURRENT_SOURCE_DIR}/hooks/${PROJECT_NAME}.dsv.in")
 
-ament_package()
+ament_auto_package(
+  INSTALL_TO_SHARE
+  config
+  launch
+  models
+  worlds
+)

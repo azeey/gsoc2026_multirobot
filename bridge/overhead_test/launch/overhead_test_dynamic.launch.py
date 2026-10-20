@@ -16,6 +16,11 @@ def generate_launch_description():
     bridge_config = os.path.join(pkg_share, 'config', 'bridge.yaml')
 
     actions = [
+        Node(
+            package='overhead_test',
+            executable='ros_load_node',
+            output='screen'
+        ),
         GzServer(
             world_sdf_file=world_file,
             use_composition=False,
@@ -24,7 +29,7 @@ def generate_launch_description():
         RosGzBridge(
             bridge_name='ros_gz_bridge',
             use_composition=False,
-            bridge_params=[{'automated_bridge.enable': True}],
+            bridge_params=[{'automated_bridge.enable': False}],
         ),
     ]
 
