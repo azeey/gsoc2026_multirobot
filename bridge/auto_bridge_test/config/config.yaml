@@ -50,6 +50,8 @@ ros_gz_bridge:
     expand_gz_topic_names: false
     automated_bridge:
       enable: true
+      include_patterns:
+        - "./vehicle.*"
       exclude_patterns:
         - ".*camera.*"
         - "/clock"
