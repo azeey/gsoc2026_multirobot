@@ -4,6 +4,8 @@ ros_gz_bridge:
       enable: true
       exclude_patterns:
         - ".*camera.*"
+      include_patterns:
+        - "/vehicle.*"
 
 warehouse_route_controller:
   ros__parameters:
