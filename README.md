@@ -80,7 +80,7 @@ Three documentation updates and two demos were prepared to demonstrate the new f
 
 ## Project Status and Pull Requests
 
-The project involved changes across several repositories, including `sdformat`, `gz-msgs`, `gz-sim`, `gz-transport`, `ros_gz`, and Gazebo documentation. As of October 27, 2026, the core namespace infrastructure and several related features have been merged, while some plugin integrations, automated bridging, demos, and documentation are still under review.
+The project involved changes across several repositories, including `sdformat`, `gz-msgs`, `gz-sim`, `gz-transport`, `ros_gz`, and Gazebo documentation. As of 1st November 2026, the core namespace infrastructure and several related features have been merged, while some plugin integrations, automated bridging, demos, and documentation are still under review.
 
 The following table lists all PRs for the project:
 
@@ -95,7 +95,7 @@ The following table lists all PRs for the project:
   </thead>
   <tbody>
     <tr>
-      <td rowspan="20">Namespace Support</td>
+      <td rowspan="23">Namespace Support</td>
       <td><a href="https://github.com/gazebosim/sdformat/pull/1663">sdformat #1663</a></td>
       <td>Add support for namespace attribute on &lt;model&gt;</td>
       <td>✅ Merged</td>
@@ -173,6 +173,21 @@ The following table lists all PRs for the project:
     <tr>
       <td><a href="https://github.com/gazebosim/gz-sim/pull/4136">gz-sim #4136</a></td>
       <td>AckermannSteering: Add namespace support</td>
+      <td>🔄 Under review</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/gazebosim/gz-sim/pull/4141">gz-sim #4141</a></td>
+      <td>TrackedVehicle & TrackController: Add namespace support</td>
+      <td>🔄 Under review</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/gazebosim/gz-sim/pull/4147">gz-sim #4147</a></td>
+      <td>JointController & JointPositionController: Add namespace support</td>
+      <td>🔄 Under review</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/gazebosim/gz-sim/pull/4164">gz-sim #4164</a></td>
+      <td>ApplyJointForce: Add custom topic support and namespace support</td>
       <td>🔄 Under review</td>
     </tr>
     <tr>
