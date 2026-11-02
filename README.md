@@ -6,7 +6,7 @@
 
 **Mentor:** Addisu Taddese ([@azeey](https://github.com/azeey))
 
-**Community Meeting Talk**: [Scalable Multi-Robot Simulation in ROS 2 and Gazebo](https://discourse.openrobotics.org/t/community-meeting-scalable-multi-robot-simulation-in-ros-2-and-gazebo/58728)
+**Community Meeting Talk**: [Talk video](https://discourse.openrobotics.org/t/community-meeting-scalable-multi-robot-simulation-in-ros-2-and-gazebo/58728); [Talk slides](https://drive.google.com/file/d/1OE7A9P7ik2KODszhehTak1SLIAJcTmdY/view?usp=sharing)
 
 ## Project Overview
 
@@ -33,6 +33,7 @@ These features aim to make multi-robot simulations easier to set up, maintain, a
 The first major part of the project was introducing model namespace support across SDFormat, Gazebo Sim, and ROS-Gazebo integration.
 
 With this feature, users can assign a namespace to a model, allowing supported Gazebo plugins to use it when resolving topic and service names.
+![Model namespace support](docs/ns.jpg)
 
 Namespaces can be configured directly in SDF files using the `<model>` namespace attribute or the `<include>` namespace element. They can also be specified when spawning models at runtime.
 
@@ -48,12 +49,26 @@ Namespace support has been added to DiffDrive and extended to other drive plugin
 
 Previously, users needed to manually configure the names, message types, and communication directions of their bridges. This becomes repetitive when working with many robots that have similar communication interfaces.
 
-The new automated bridge can discover matching topics and services on the ROS 2 and Gazebo sides and create the corresponding bridges.
+The new automated bridge can discover matching topics and services on the ROS 2 and Gazebo sides and create the corresponding bridges. As illustrated below, the process consists of three main steps: discovering available interfaces, matching them based on their names and compatible message types, and creating the required bridges.
+![Automated bridge](docs/bridge.jpg)
 
 The feature is optional and can be enabled using the `automated_bridge.enable` parameter. It also provides two optional configuration parameters:
 
 - `include_patterns`: Select which topics and services should be considered.
 - `exclude_patterns`: Exclude specific topics and services from automated bridging.
+
+For example, the following configuration enables automated bridging for interfaces under `/robot1` while excluding camera-related topics:
+``` yaml
+# example
+ros_gz_bridge:
+  ros__parameters:
+    automated_bridge:
+      enable: true
+      include_patterns:
+        - "/robot1.*"
+      exclude_patterns:
+        - ".*camera.*"
+```
 
 The automated bridge continuously checks for new interfaces, allowing it to discover topics and services created after the simulation starts.
 
