@@ -95,7 +95,7 @@ The following table lists all PRs for the project:
   </thead>
   <tbody>
     <tr>
-      <td rowspan="23">Namespace Support</td>
+      <td rowspan="24">Namespace Support</td>
       <td><a href="https://github.com/gazebosim/sdformat/pull/1663">sdformat #1663</a></td>
       <td>Add support for namespace attribute on &lt;model&gt;</td>
       <td>✅ Merged</td>
@@ -188,6 +188,11 @@ The following table lists all PRs for the project:
     <tr>
       <td><a href="https://github.com/gazebosim/gz-sim/pull/4164">gz-sim #4164</a></td>
       <td>ApplyJointForce: Add custom topic support and namespace support</td>
+      <td>🔄 Under review</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/gazebosim/gz-sim/pull/4166">gz-sim #4166</a></td>
+      <td>DriveToPoseController: Add custom topic support and namespace support</td>
       <td>🔄 Under review</td>
     </tr>
     <tr>
